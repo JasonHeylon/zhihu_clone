@@ -13,10 +13,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'unicorn'
 gem "mongoid", "~> 4.0.0"
+gem 'devise'
 
 group :development do
   gem 'capistrano-rails'
   gem 'quiet_assets'
+  gem 'rack-mini-profiler'
 end
 
 group :test do
