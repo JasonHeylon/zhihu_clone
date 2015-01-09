@@ -19,6 +19,9 @@ group :development do
   gem 'capistrano-rails'
   gem 'quiet_assets'
   gem 'rack-mini-profiler'
+  gem 'pry'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :test do
@@ -31,7 +34,7 @@ group :test do
 end
 
 group :development, :test do
-  gem 'byebug'
+  # gem 'byebug'
   gem 'faker', '~> 1.4.3'
   gem 'web-console', '~> 2.0'
   gem 'spring'

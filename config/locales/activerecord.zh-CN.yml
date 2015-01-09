@@ -8,7 +8,3 @@ zh-CN:
           password: "密码"
           password_confirmation: "密码确认"
           email: "登陆邮箱"
-          desc: "个人简介"
-          website: "个人主页"
-          nickname: "显示昵称"
-          current_password: '当前密码'
