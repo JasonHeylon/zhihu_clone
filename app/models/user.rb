@@ -2,7 +2,7 @@ class User
   include Mongoid::Document
   include Common::BaseModel
 
-  has_many :questions
+  has_many :questions, dependent: :destroy
 
 
   # Include default devise modules. Others available are:
@@ -41,6 +41,8 @@ class User
 
 
   field :username, type: String
+
+  field :questions_count, type: Integer
 
   # fix mongodb devise issue https://github.com/plataformatec/devise/issues/2949
   def self.serialize_from_session(key, salt)
