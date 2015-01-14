@@ -2,6 +2,7 @@ class Question
   include Mongoid::Document
   include Common::BaseModel
   include Common::CounterCache
+  include Common::Followable
 
   belongs_to :user, inverse_of: :questions
 

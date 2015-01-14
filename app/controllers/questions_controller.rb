@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :set_question, only: [:show, :edit, :update, :destroy]
+  before_action :set_question, only: [:show, :edit, :update, :destroy, :follow, :unfollow]
   before_action :authenticate_user!, except: [:show, :index]
 
   # GET /questions
@@ -59,6 +59,23 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to questions_url, notice: 'Question was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+
+  def follow
+    @question.follow_by(current_user.id)
+    respond_to do |format|
+      format.html { redirect_to @question, notice: '成功' }
+      format.json { @question }
+    end
+  end
+
+  def unfollow
+    @question.unfollow_by(current_user.id)
+    respond_to do |format|
+      format.html { redirect_to @question, notice: '成功' }
+      format.json { @question }
     end
   end
 

@@ -9,10 +9,21 @@
   <strong>Description:</strong>
   <%= @question.description %>
 </p>
-<p>
-  <strong>User email:</strong>
-  <%= @question.user.try(:email) || "no one" %>
-</p>
+
+<%- if user_signed_in? %>
+  <%- if @question.followed_by?(current_user.id) %>
+    <%= link_to "取消关注", unfollow_question_path(@question), method: :delete %>
+  <%- else %>
+    <%= link_to "关注", follow_question_path(@question), method: :post %>
+  <%- end %>
+<%- else %>
+
+  登陆后关注
+
+<%- end %>
+
+
+
 
 <%= link_to 'Edit', edit_question_path(@question) %> |
 <%= link_to 'Back', questions_path %>

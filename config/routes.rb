@@ -1,7 +1,22 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :questions
+  resources :questions do
+    # match 'vote', to: "questions#vote", via: :post, on: :member
+    # match 'unvote', to: "questions#unvote", via: :delete, on: :member
+    match 'follow', to: "questions#follow", via: :post, on: :member
+    match 'unfollow', to: "questions#unfollow", via: :delete, on: :member
+  end
+
+
+
   root "questions#index"
+
+
+  # resources :votes
+
+  resources :users do
+    
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
