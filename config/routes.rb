@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+
   devise_for :users
   resources :questions do
     # match 'vote', to: "questions#vote", via: :post, on: :member
     # match 'unvote', to: "questions#unvote", via: :delete, on: :member
     match 'follow', to: "questions#follow", via: :post, on: :member
     match 'unfollow', to: "questions#unfollow", via: :delete, on: :member
+
+    resources :answers, only: [:create, :update, :destroy]
   end
 
 

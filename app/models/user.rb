@@ -4,6 +4,8 @@ class User
 
   has_many :questions, dependent: :destroy
 
+  has_many :answers, dependent: :destroy
+
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :omniauthable
@@ -42,7 +44,9 @@ class User
 
   field :username, type: String
 
-  field :questions_count, type: Integer
+  field :questions_count, type: Integer, default: 0
+
+  field :answers_count, type: Integer, default: 0
 
 
 
