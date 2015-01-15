@@ -12,15 +12,15 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :title %>
+    <%= f.label :title, "问题标题" %>
     <%= f.text_field :title, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :description %>
+    <%= f.label :description, "问题描述" %>
     <%= f.text_area :description, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= f.submit class:'btn btn-default' %>
+    <%= f.submit "提交问题", class:'btn btn-default' %>
   </div>
 <% end %>

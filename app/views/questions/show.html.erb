@@ -9,6 +9,9 @@
   <strong>Description:</strong>
   <%= @question.description %>
 </p>
+<p>
+  查看数： <%= @question.viewed_count %>
+</p>
 
 <%- if user_signed_in? %>
   <%- if @question.followed_by?(current_user.id) %>

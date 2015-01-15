@@ -5,12 +5,13 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.json
   def index
-    @questions = Question.all
+    @questions = Question.latest
   end
 
   # GET /questions/1
   # GET /questions/1.json
   def show
+    @question.inc(viewed_count: 1)
   end
 
   # GET /questions/new
@@ -29,7 +30,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
-        format.html { redirect_to @question, notice: 'Question was successfully created.' }
+        format.html { redirect_to @question, flash: { success: '问题已经成功创建.' } }
         format.json { render :show, status: :created, location: @question }
       else
         format.html { render :new }
@@ -43,7 +44,7 @@ class QuestionsController < ApplicationController
   def update
     respond_to do |format|
       if @question.update(question_params)
-        format.html { redirect_to @question, notice: 'Question was successfully updated.' }
+        format.html { redirect_to @question, flash: { success: '问题已经成功更新.' } }
         format.json { render :show, status: :ok, location: @question }
       else
         format.html { render :edit }
@@ -55,10 +56,17 @@ class QuestionsController < ApplicationController
   # DELETE /questions/1
   # DELETE /questions/1.json
   def destroy
-    @question.destroy
-    respond_to do |format|
-      format.html { redirect_to questions_url, notice: 'Question was successfully destroyed.' }
-      format.json { head :no_content }
+    if @question.user == current_user
+      @question.destroy
+      respond_to do |format|
+        format.html { redirect_to questions_url, flash: { success: '成功删除问题.' } }
+        format.json { head :no_content }
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to :back, flash: { success: '删除失败,只能删除自己的问题.' } }
+        format.json { render json: @question, status: :unprocessable_entity }
+      end
     end
   end
 
@@ -66,7 +74,7 @@ class QuestionsController < ApplicationController
   def follow
     @question.follow_by(current_user.id)
     respond_to do |format|
-      format.html { redirect_to @question, notice: '成功' }
+      format.html { redirect_to @question, flash: {success: '关注成功' } }
       format.json { @question }
     end
   end
@@ -74,7 +82,7 @@ class QuestionsController < ApplicationController
   def unfollow
     @question.unfollow_by(current_user.id)
     respond_to do |format|
-      format.html { redirect_to @question, notice: '成功' }
+      format.html { redirect_to @question, flash: { success: '取消关注成功' } }
       format.json { @question }
     end
   end
