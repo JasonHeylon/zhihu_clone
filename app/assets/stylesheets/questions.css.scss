@@ -35,6 +35,40 @@
     }
   }
 
+  .answers{
+    
+
+    .answers-header{
+      border-bottom: 1px solid #e1e1e1;
+      line-height: 35px;
+      height: 35px;
+      font-weight: bold;
+    }
+    .answer{
+      padding: 10px 0px;
+      border-bottom: 1px solid #e1e1e1;
+      .answer-head{
+        margin-bottom: 10px;
+        .user { font-weight: bold; }
+      }
+      .content{
+
+      }
+      .info{
+        margin-top: 10px;
+        font-size: 0.9em;
+        color: #999;
+        a{
+          color: #999;
+          &:hover{ color: #698ebf; }
+        }
+      }
+
+    }
+
+  }
+
+
   .right-control{
 
   }
