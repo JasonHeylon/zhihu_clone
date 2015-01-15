@@ -49,6 +49,10 @@ class User
   field :answers_count, type: Integer, default: 0
 
 
+  def to_s
+    self.username
+  end
+
 
   # fix mongodb devise issue https://github.com/plataformatec/devise/issues/2949
   def self.serialize_from_session(key, salt)

@@ -1,0 +1,42 @@
+// Place all the styles related to the questions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.latest-questions{
+  .header-title{ font-size: 1.2em; height: 26px; line-height: 26px; border-bottom: 1px solid #e1e1e1; margin-bottom: 5px; }
+  .questions-box{
+    .question{
+      padding: 5px 0px;
+      font-size: 1.1em;
+      .title {
+        margin-bottom: 3px;
+        a{ color: #259; font-weight: bold; font-size: 1em; }
+      }
+      .user{ font-size: 0.8em; color: #999; }
+      .content{ margin: 5px 0px; padding: 5px 10px; border-left: 3px solid #DDD; font-size: 0.8em; }
+      .info{ color: #BBB; font-size: 0.8em; }
+    }
+  }
+}
+
+
+.question-show{
+  .question{
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 5px;
+    .title{ font-size: 1.2em; font-weight: bold; margin-bottom: 10px; }
+    .content{ font-size: 1em; }
+    .question-bottom-bar{
+      margin-top: 10px;
+      font-size: 1em;
+      color: #999;
+      .control-item{ margin-right: 5px; }
+      a{ color: #999;}
+    }
+  }
+
+  .right-control{
+
+  }
+
+}

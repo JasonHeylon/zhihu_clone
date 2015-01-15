@@ -1,28 +1,29 @@
 <%= provide(:title, "最新问题") %>
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Created at</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @questions.each do |question| %>
-      <tr>
-        <td><%= question.title %></td>
-        <td><%= question.description %></td>
-        <td><%= question.created_at %></td>
-        <td><%= link_to 'Show', question %></td>
-        <td><%= link_to 'Edit', edit_question_path(question) %></td>
-        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-md-8 latest-questions">
+    <div class="header-title">
+      最新问题
+    </div>
+    <div class="questions-box">
+      <%- @questions.each do |question| %>
+        <div class="question">
+          <div class="title"><%= link_to question.title, question  %></div>
+          <div class="user">
+            <%= link_to question.user.username, "#" %> 添加了问题
+          </div>
+          <div class="content">
+            <%= question.description %>
+          </div>
+          <div class="info">
+            <%= question.created_at %>
+          </div>
+        </div>
+      <%- end %>
+    </div>
+  </div>
+  <div class="col-md-4">
+    b
+  </div>
+</div>
 
-<br>
-
-<%= link_to 'New Question', new_question_path %>

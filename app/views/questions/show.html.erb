@@ -1,32 +1,38 @@
-<p id="notice"><%= notice %></p>
+<%= provide(:title, @question.title) %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @question.title %>
-</p>
+<div class="row question-show">
+  <div class="col-md-8">
+    <div class="question">
+      <div class="title">
+        <%= @question.title %>
+      </div>
+      <div class="content">
+        <%= @question.description %>
+      </div>
+      <div class="question-bottom-bar">
+        <%= link_to '编辑', edit_question_path(@question), class: 'control-item' %>
+        <%= link_to '删除', question_path(@question), method: :delete, data: { confirm: "确认删除？" }, class: 'control-item' %>
+        <span class="control-item"><%= @question.viewed_count %>次查看</span>
+      </div>
+    </div>
+  </div>
+  <dov class="col-md-4">
+    <div class="right-control">
+      <%- if user_signed_in? %>
+        <%- if @question.followed_by?(current_user.id) %>
+          <%= link_to "取消关注", unfollow_question_path(@question), class: "btn btn-default", method: :delete %>
+        <%- else %>
+          <%= link_to "关注", follow_question_path(@question), class: "btn btn-primary", method: :post %>
+        <%- end %>
+      <%- else %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @question.description %>
-</p>
-<p>
-  查看数： <%= @question.viewed_count %>
-</p>
+        登陆后关注
 
-<%- if user_signed_in? %>
-  <%- if @question.followed_by?(current_user.id) %>
-    <%= link_to "取消关注", unfollow_question_path(@question), method: :delete %>
-  <%- else %>
-    <%= link_to "关注", follow_question_path(@question), method: :post %>
-  <%- end %>
-<%- else %>
-
-  登陆后关注
-
-<%- end %>
+      <%- end %>
+    </div>
+  </dov>
+</div>
 
 
 
 
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', questions_path %>
