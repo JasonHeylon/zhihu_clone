@@ -2,9 +2,16 @@ zh-CN:
   activerecord:
       models:
         user: 用户
+        question: 问题
+        answer: 回答
       attributes:
         user:
           username: "用户名"
           password: "密码"
           password_confirmation: "密码确认"
           email: "登陆邮箱"
+        question:
+          title: 标题
+          description: 内容
+        answer:
+          content: 回答内容

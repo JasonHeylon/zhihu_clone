@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
 
   devise_for :users
+
+  devise_scope :user do
+    match "/login", to: "devise/sessions#new", via: :get, as: :login
+    match '/register', to: "devise/registrations#new", via: :get, as: :register
+   end
+
+
   resources :questions do
     # match 'vote', to: "questions#vote", via: :post, on: :member
     # match 'unvote', to: "questions#unvote", via: :delete, on: :member
