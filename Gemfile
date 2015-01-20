@@ -23,6 +23,8 @@ gem 'unicorn'
 gem "mongoid", "~> 4.0.0"
 gem 'devise'
 
+gem 'faye-rails', '~> 2.0.0'
+
 group :development do
   gem 'capistrano-rails'
   gem 'quiet_assets'
