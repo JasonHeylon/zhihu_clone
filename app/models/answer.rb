@@ -1,7 +1,8 @@
 class Answer
   include Mongoid::Document
   include Common::BaseModel
-  include Common::CounterCache
+  include Mongoid::CounterCache
+  include Mongoid::Voteable
 
   field :content, type: String
 
@@ -10,6 +11,12 @@ class Answer
 
   counter_cache name: :user, inverse_of: :answers
   counter_cache name: :question, inverse_of: :answers
+
+
+
+  def up_voted_users
+    User.find(up_voted_user_ids)
+  end
 
 
 end

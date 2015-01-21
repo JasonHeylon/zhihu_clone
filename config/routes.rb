@@ -17,6 +17,14 @@ Rails.application.routes.draw do
     resources :answers, only: [:create, :update, :destroy]
   end
 
+  resources :answers, only: [:index, :show] do
+    member do
+      post 'up_vote'
+      delete 'down_vote'
+    end
+  end
+
+
 
 
   root "questions#index"

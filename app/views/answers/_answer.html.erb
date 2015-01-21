@@ -1,0 +1,14 @@
+        <div class="answer">
+          <div class="answer-head">
+            <div class="user"><%= answer.user %></div>
+          </div>
+          <div class="content">
+            <%= raw answer.content %>
+          </div>
+          <div class="info">
+            <span class="time-info">发布与<%= answer.created_at.strftime("%Y-%m-%d") %></span>
+            <a href="#">2条评论</a>
+            <span><%= link_to "赞同", up_vote_answer_path(answer), method: :post %> <%= answer.up_voted_count %></span>
+            <span><%= link_to "不赞同", down_vote_answer_path(answer), method: :delete %> <%= answer.down_voted_count %></span>
+          </div>
+        </div>

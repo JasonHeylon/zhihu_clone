@@ -1,4 +1,4 @@
-module Common
+module Mongoid
   module Followable
     extend ActiveSupport::Concern
     included do

@@ -25,6 +25,26 @@ class AnswersController < ApplicationController
   def destroy
   end
 
+  def up_vote
+    answer = Answer.find(params[:id])
+    if answer.voted_by?(current_user, "up")
+      answer.undo_up_vote_by(current_user)
+    else
+      answer.up_vote_by(current_user)
+    end
+    redirect_to answer.question, flash:{ success: "提交成功" }
+  end
+  def down_vote
+    answer = Answer.find(params[:id])
+    if answer.voted_by?(current_user, "down")
+      answer.undo_down_vote_by(current_user)
+    else
+      answer.down_vote_by(current_user)
+    end
+    
+    redirect_to answer.question, flash:{ success: "提交成功" }
+  end
+
   private
     def answer_params
       params.require(:answer).permit(:content)

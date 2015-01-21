@@ -20,18 +20,7 @@
         <%= @question.answers.count %> 个回答
       </div>
       <%- @question.answers.each do |answer| %>
-        <div class="answer">
-          <div class="answer-head">
-            <div class="user"><%= answer.user %></div>
-          </div>
-          <div class="content">
-            <%= raw answer.content %>
-          </div>
-          <div class="info">
-            <span class="time-info">发布与<%= answer.created_at.strftime("%Y-%m-%d") %></span>
-            <a href="#">2条评论</a>
-          </div>
-        </div>
+        <%= render partial: 'answers/answer', locals: { answer: answer } %>
       <%- end %>
     </div>
 
