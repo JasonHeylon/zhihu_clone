@@ -1,6 +1,13 @@
         <div class="answer">
           <div class="answer-head">
             <div class="user"><%= answer.user %></div>
+            <%- if answer.up_voted_count > 0 %>
+              <div class="agree-list">
+                <%- answer.up_voted_users.each do |user| %>
+                  <%= user.username %>,
+                <%- end %> 等人赞同
+                </div>
+            <%- end %>
           </div>
           <div class="content">
             <%= raw answer.content %>

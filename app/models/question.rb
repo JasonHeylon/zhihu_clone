@@ -17,5 +17,8 @@ class Question
 
   scope :latest, -> { desc(:created_at) }
 
+  validates :title, presence: true, length: {maximum: 250}
+  validates :description, presence: true, length: {minimum:100, maximum: 2000}
+  
 
 end

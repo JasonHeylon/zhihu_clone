@@ -1,0 +1,7 @@
+      <div class="new-answer-box">
+        
+        <%= simple_form_for [question, question.answers.new] do |f| %>
+          <%= f.input :content, label: false, input_html: { id: "txtNewAnswer", placeholder: "写回答..." } %>
+          <%= f.button :submit, "提交", input_html: { id: "btnNewAnswer" } %>
+        <%- end %>
+      </div>

@@ -24,6 +24,7 @@ gem "mongoid", "~> 4.0.0"
 gem 'devise'
 
 gem 'faye-rails', '~> 2.0.0'
+gem 'simple_form'
 
 group :development do
   gem 'capistrano-rails'

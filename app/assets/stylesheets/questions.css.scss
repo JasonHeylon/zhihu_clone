@@ -21,6 +21,7 @@
 
 
 .question-show{
+  .question-show-wrapper{ margin-left: 48px; }
   .question{
     border-bottom: 1px solid #e1e1e1;
     padding-bottom: 5px;
@@ -43,13 +44,21 @@
       line-height: 45px;
       height: 45px;
       font-weight: bold;
+
+
     }
     .answer{
       padding: 10px 0px;
       border-bottom: 1px solid #e1e1e1;
       .answer-head{
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         .user { font-weight: bold; }
+        .agree-list{
+          height: 30px;
+          line-height: 30px;
+          color: #999;
+          font-size: 0.9em;
+        }
       }
       .content{
 

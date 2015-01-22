@@ -12,7 +12,7 @@ class Answer
   counter_cache name: :user, inverse_of: :answers
   counter_cache name: :question, inverse_of: :answers
 
-
+  validates :content, presence: true, length: { maximum: 10000 }
 
   def up_voted_users
     User.find(up_voted_user_ids)

@@ -2,36 +2,32 @@
 
 <div class="row question-show">
   <div class="col-md-8">
-    <div class="question">
-      <div class="title">
-        <%= @question.title %>
+    <div class="question-show-wrapper">
+      <div class="question">
+        <div class="title">
+          <%= @question.title %>
+        </div>
+        <div class="content">
+          <%= raw @question.description %>
+        </div>
+        <div class="question-bottom-bar">
+          <%= link_to '编辑', edit_question_path(@question), class: 'control-item' %>
+          <%= link_to '删除', question_path(@question), method: :delete, data: { confirm: "确认删除？" }, class: 'control-item' %>
+          <span class="control-item"><%= @question.viewed_count %>次查看</span>
+        </div>
       </div>
-      <div class="content">
-        <%= @question.description %>
+      <div class="answers">
+        <div class="answers-header">
+          <%= @question.answers.count %> 个回答
+        </div>
+        <%- @question.answers.each do |answer| %>
+          <%= render partial: 'answers/answer', locals: { answer: answer } %>
+        <%- end %>
       </div>
-      <div class="question-bottom-bar">
-        <%= link_to '编辑', edit_question_path(@question), class: 'control-item' %>
-        <%= link_to '删除', question_path(@question), method: :delete, data: { confirm: "确认删除？" }, class: 'control-item' %>
-        <span class="control-item"><%= @question.viewed_count %>次查看</span>
-      </div>
-    </div>
-    <div class="answers">
-      <div class="answers-header">
-        <%= @question.answers.count %> 个回答
-      </div>
-      <%- @question.answers.each do |answer| %>
-        <%= render partial: 'answers/answer', locals: { answer: answer } %>
-      <%- end %>
+
+      <%= render partial: "answers/new_answer", locals: { question: @question } %>
     </div>
 
-    <div class="new-answer-box">
-
-      <%= form_for [@question, @question.answers.new] do |f| %>
-        <%= f.text_area :content, class: 'form-control', id: "txtNewAnswer", placeholder: "写回答..." %>
-
-        <%= f.submit "保存", id: "btnNewAnswer", class: 'btn btn-primary' %>
-      <%- end %>
-    </div>
 
   </div>
   <dov class="col-md-4">
