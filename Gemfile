@@ -23,8 +23,14 @@ gem 'unicorn'
 gem "mongoid", "~> 4.0.0"
 gem 'devise'
 
-gem 'faye-rails', '~> 2.0.0'
+# gem 'faye'
+gem 'faye-rails'
+# Faye Server
+gem 'thin'
+
 gem 'simple_form'
+# for yml setting
+gem 'settingslogic', '~> 2.0.9'
 
 group :development do
   gem 'capistrano-rails'

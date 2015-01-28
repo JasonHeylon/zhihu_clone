@@ -16,6 +16,7 @@ db/*.sqlite3
 config/database.yml
 config/mongoid.yml
 config/secrets.yml
+config/config.yml
 public/uploads/
 
 .redcar

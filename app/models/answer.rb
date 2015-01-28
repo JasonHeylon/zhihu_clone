@@ -8,9 +8,12 @@ class Answer
 
   belongs_to :user, inverse_of: :answers
   belongs_to :question, inverse_of: :answers
+  has_many :notifications, class_name: 'Notification', dependent: :destroy
 
   counter_cache name: :user, inverse_of: :answers
   counter_cache name: :question, inverse_of: :answers
+
+  
 
   validates :content, presence: true, length: { maximum: 10000 }
 

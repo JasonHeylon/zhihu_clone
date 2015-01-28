@@ -17,4 +17,20 @@
 //= require module
 //= require hotkeys
 //= require simditor
+//= require faye
 //= require_tree .
+
+window.App = { };
+
+
+App.InitFayeClient = function(){
+  var faye_client = new Faye.Client('http://localhost:9090/faye')
+  faye_client.subscribe('/messages', function(data){
+    alert(data["body"]);
+  });
+};
+
+$(function(){
+  App.InitFayeClient();
+
+});

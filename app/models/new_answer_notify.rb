@@ -1,0 +1,4 @@
+class NewAnswerNotify < Notification
+  
+
+end

@@ -1,0 +1,122 @@
+Writing PID to tmp/pids/thin.9090.pid
+Using rack adapter
+Thin web server (v1.6.3 codename Protein Powder)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9090, CTRL+C to stop
+Waiting for 1 connection(s) to finish, can take up to 120 sec, CTRL+C to stop now
+Stopping ...
+Exiting!
+Writing PID to tmp/pids/thin.9090.pid
+Using rack adapter
+Thin web server (v1.6.3 codename Protein Powder)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9090, CTRL+C to stop
+Waiting for 1 connection(s) to finish, can take up to 120 sec, CTRL+C to stop now
+Stopping ...
+Exiting!
+Writing PID to tmp/pids/thin.9090.pid
+Using rack adapter
+Exiting!
+/home/jasonheylon/MyProject/zhihu_clone/zhihu_clone/faye_server/config.ru:24:in `block in <main>': undefined local variable or method `app' for #<Rack::Builder:0x00000001fb6bd8> (NameError)
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/rack-1.6.0/lib/rack/builder.rb:55:in `instance_eval'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/rack-1.6.0/lib/rack/builder.rb:55:in `initialize'
+	from /home/jasonheylon/MyProject/zhihu_clone/zhihu_clone/faye_server/config.ru:1:in `new'
+	from /home/jasonheylon/MyProject/zhihu_clone/zhihu_clone/faye_server/config.ru:1:in `<main>'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/rack/adapter/loader.rb:33:in `eval'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/rack/adapter/loader.rb:33:in `load'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/rack/adapter/loader.rb:42:in `for'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/thin/controllers/controller.rb:170:in `load_adapter'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/thin/controllers/controller.rb:74:in `start'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/thin/runner.rb:200:in `run_command'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/thin/runner.rb:156:in `run!'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/bin/thin:6:in `<top (required)>'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/bin/thin:23:in `load'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/bin/thin:23:in `<main>'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/bin/ruby_executable_hooks:15:in `eval'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/bin/ruby_executable_hooks:15:in `<main>'
+Writing PID to tmp/pids/thin.9090.pid
+Using rack adapter
+Exiting!
+/home/jasonheylon/MyProject/zhihu_clone/zhihu_clone/faye_server/config.ru:24:in `block in <main>': undefined local variable or method `app' for #<Rack::Builder:0x000000026e17c8> (NameError)
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/rack-1.6.0/lib/rack/builder.rb:55:in `instance_eval'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/rack-1.6.0/lib/rack/builder.rb:55:in `initialize'
+	from /home/jasonheylon/MyProject/zhihu_clone/zhihu_clone/faye_server/config.ru:1:in `new'
+	from /home/jasonheylon/MyProject/zhihu_clone/zhihu_clone/faye_server/config.ru:1:in `<main>'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/rack/adapter/loader.rb:33:in `eval'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/rack/adapter/loader.rb:33:in `load'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/rack/adapter/loader.rb:42:in `for'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/thin/controllers/controller.rb:170:in `load_adapter'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/thin/controllers/controller.rb:74:in `start'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/thin/runner.rb:200:in `run_command'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/thin/runner.rb:156:in `run!'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/bin/thin:6:in `<top (required)>'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/bin/thin:23:in `load'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/bin/thin:23:in `<main>'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/bin/ruby_executable_hooks:15:in `eval'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/bin/ruby_executable_hooks:15:in `<main>'
+Writing PID to tmp/pids/thin.9090.pid
+Using rack adapter
+Exiting!
+/home/jasonheylon/MyProject/zhihu_clone/zhihu_clone/faye_server/config.ru:24:in `block in <main>': undefined local variable or method `app' for #<Rack::Builder:0x0000000155b7d8> (NameError)
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/rack-1.6.0/lib/rack/builder.rb:55:in `instance_eval'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/rack-1.6.0/lib/rack/builder.rb:55:in `initialize'
+	from /home/jasonheylon/MyProject/zhihu_clone/zhihu_clone/faye_server/config.ru:1:in `new'
+	from /home/jasonheylon/MyProject/zhihu_clone/zhihu_clone/faye_server/config.ru:1:in `<main>'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/rack/adapter/loader.rb:33:in `eval'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/rack/adapter/loader.rb:33:in `load'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/rack/adapter/loader.rb:42:in `for'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/thin/controllers/controller.rb:170:in `load_adapter'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/thin/controllers/controller.rb:74:in `start'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/thin/runner.rb:200:in `run_command'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/thin/runner.rb:156:in `run!'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/bin/thin:6:in `<top (required)>'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/bin/thin:23:in `load'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/bin/thin:23:in `<main>'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/bin/ruby_executable_hooks:15:in `eval'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/bin/ruby_executable_hooks:15:in `<main>'
+Writing PID to tmp/pids/thin.9090.pid
+Using rack adapter
+Exiting!
+/home/jasonheylon/MyProject/zhihu_clone/zhihu_clone/faye_server/config.ru:24:in `block in <main>': undefined local variable or method `app' for #<Rack::Builder:0x0000000185a6f0> (NameError)
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/rack-1.6.0/lib/rack/builder.rb:55:in `instance_eval'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/rack-1.6.0/lib/rack/builder.rb:55:in `initialize'
+	from /home/jasonheylon/MyProject/zhihu_clone/zhihu_clone/faye_server/config.ru:1:in `new'
+	from /home/jasonheylon/MyProject/zhihu_clone/zhihu_clone/faye_server/config.ru:1:in `<main>'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/rack/adapter/loader.rb:33:in `eval'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/rack/adapter/loader.rb:33:in `load'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/rack/adapter/loader.rb:42:in `for'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/thin/controllers/controller.rb:170:in `load_adapter'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/thin/controllers/controller.rb:74:in `start'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/thin/runner.rb:200:in `run_command'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/thin/runner.rb:156:in `run!'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/bin/thin:6:in `<top (required)>'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/bin/thin:23:in `load'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/bin/thin:23:in `<main>'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/bin/ruby_executable_hooks:15:in `eval'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/bin/ruby_executable_hooks:15:in `<main>'
+Writing PID to tmp/pids/thin.9090.pid
+Using rack adapter
+Exiting!
+/home/jasonheylon/MyProject/zhihu_clone/zhihu_clone/faye_server/config.ru:24:in `block in <main>': undefined local variable or method `app' for #<Rack::Builder:0x0000000142de88> (NameError)
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/rack-1.6.0/lib/rack/builder.rb:55:in `instance_eval'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/rack-1.6.0/lib/rack/builder.rb:55:in `initialize'
+	from /home/jasonheylon/MyProject/zhihu_clone/zhihu_clone/faye_server/config.ru:1:in `new'
+	from /home/jasonheylon/MyProject/zhihu_clone/zhihu_clone/faye_server/config.ru:1:in `<main>'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/rack/adapter/loader.rb:33:in `eval'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/rack/adapter/loader.rb:33:in `load'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/rack/adapter/loader.rb:42:in `for'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/thin/controllers/controller.rb:170:in `load_adapter'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/thin/controllers/controller.rb:74:in `start'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/thin/runner.rb:200:in `run_command'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/lib/thin/runner.rb:156:in `run!'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/gems/thin-1.6.3/bin/thin:6:in `<top (required)>'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/bin/thin:23:in `load'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/bin/thin:23:in `<main>'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/bin/ruby_executable_hooks:15:in `eval'
+	from /home/jasonheylon/.rvm/gems/ruby-2.2.0@zhihu_clone/bin/ruby_executable_hooks:15:in `<main>'
+Writing PID to tmp/pids/thin.9090.pid
+Using rack adapter
+Thin web server (v1.6.3 codename Protein Powder)
+Maximum connections set to 1024
+Listening on 0.0.0.0:9090, CTRL+C to stop
+Exiting!

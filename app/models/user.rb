@@ -2,11 +2,6 @@ class User
   include Mongoid::Document
   include Common::BaseModel
 
-  has_many :questions, dependent: :destroy
-
-  has_many :answers, dependent: :destroy
-
-
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :omniauthable
   devise :database_authenticatable, :registerable,
@@ -43,11 +38,16 @@ class User
 
 
   field :username, type: String
-
   field :questions_count, type: Integer, default: 0
-
   field :answers_count, type: Integer, default: 0
 
+  # index :email
+
+
+  has_many :questions, dependent: :destroy
+
+  has_many :answers, dependent: :destroy
+  has_many :notifications, dependent: :destroy
 
   def to_s
     self.username
