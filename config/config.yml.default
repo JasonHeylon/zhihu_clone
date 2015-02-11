@@ -1,0 +1,15 @@
+defaults: &defaults
+  app_name: "Zhihu Clone"
+  domain: "127.0.0.1:3000"
+  faye_server: "http://127.0.0.1:9090/faye"
+  faye_client_url: "http://127.0.0.1:9090/faye"
+  faye_token: 'jasonheylon'
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

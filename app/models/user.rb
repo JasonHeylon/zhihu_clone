@@ -47,7 +47,7 @@ class User
   has_many :questions, dependent: :destroy
 
   has_many :answers, dependent: :destroy
-  has_many :notifications, dependent: :destroy
+  has_many :notifications, class_name: 'Notification::Base' , dependent: :delete
 
   def to_s
     self.username

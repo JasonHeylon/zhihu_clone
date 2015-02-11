@@ -19,9 +19,13 @@ config/secrets.yml
 config/config.yml
 public/uploads/
 
+faye_server/log/
+faye_server/tmp/
+
 .redcar
 .DS_Store
 *.swp
 *.swo
 .rvmrc
 dump.rdb
+*.pid

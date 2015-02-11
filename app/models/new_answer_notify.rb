@@ -1,4 +1,0 @@
-class NewAnswerNotify < Notification
-  
-
-end

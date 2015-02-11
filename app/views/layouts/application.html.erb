@@ -10,6 +10,12 @@
 </head>
 <body  data-controller="<%= controller.controller_name %>" data-action="<%= controller.action_name %>">
 
+  <%- if user_signed_in? %>
+    <script>
+      window.App.user_id = '<%= current_user.id %>';
+    </script>
+  <%- end %>
+
   <%= render "shared/header" %>
   
   <div id="body" class="container">

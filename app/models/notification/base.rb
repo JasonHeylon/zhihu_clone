@@ -1,4 +1,4 @@
-class Notification
+class Notification::Base
   include Mongoid::Document
   include Common::BaseModel
 
@@ -21,13 +21,21 @@ class Notification
   def push_to_client
     if self.user
       hash = self.notify_hash
-      hash[:count] = unread.count
+      hash[:count] = self.user.notifications.unread.count
       FayeClient.send("/notifications_count/#{self.user.id}", hash)
     end
   end
 
   def notify_hash
     {}
+  end
+
+  def content_path
+    ''
+  end
+
+  def read
+    this.update(has_read: true)
   end
 
 end

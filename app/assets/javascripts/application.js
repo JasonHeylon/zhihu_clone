@@ -20,13 +20,17 @@
 //= require faye
 //= require_tree .
 
-window.App = { };
+window.App = { 
+	user_id: ''
+};
 
 
 App.InitFayeClient = function(){
   var faye_client = new Faye.Client('http://localhost:9090/faye')
-  faye_client.subscribe('/messages', function(data){
-    alert(data["body"]);
+  faye_client.subscribe('/notifications_count/' + App.user_id, function(data){
+    // alert(data["title"] + data['count']);
+    $('#badgeNotification').html(data['count']);
+    document.title = "您有新消息!  - 知乎clone";
   });
 };
 
